@@ -13,7 +13,7 @@ namespace juego_adivina_numero_while
             int minumero = 101;
 
 
-         // Console.WriteLine($"el numero es {aleatorio}");
+         Console.WriteLine($"el numero es {aleatorio}");
         
             int intentos = 0;
 
@@ -26,9 +26,12 @@ namespace juego_adivina_numero_while
 
                 minumero = int.Parse(Console.ReadLine());
 
-                if (minumero > aleatorio) { Console.WriteLine("El numero es mas alto"); }
+                var mensaje = minumero > aleatorio ? "El numero es mas alto" : "El numero es mas bajo";
+                Console.WriteLine(mensaje);
 
-                if (minumero < aleatorio) { Console.WriteLine("El numero es mas bajo"); }
+                /*if (minumero > aleatorio) { Console.WriteLine("El numero es mas alto"); }
+
+                if (minumero < aleatorio) { Console.WriteLine("El numero es mas bajo"); }*/
 
             }
             Console.WriteLine($"has acertado, haz necesitado de {intentos} intentos.");
